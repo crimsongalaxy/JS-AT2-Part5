@@ -420,7 +420,7 @@ p {
     border: 1rem solid var(--secondary);
     border-radius: 4rem;
     margin-top: 7.5rem;
-    height: 75vh;
+    height: 500px;
 }
 
 #movie-table {
@@ -489,16 +489,71 @@ p {
 }
 
 #add-mov {
+    /* height: 500px; */
+    background-color: var(--primary);
+    border: 0.5rem solid var(--primary);
+    border-radius: 0 0 4rem 4rem;
+}
 
+#add-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2.5rem;
+}
+
+.change-div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5rem;
+    padding-left: 5%;
+}
+
+.change-label {
+    color: var(--secondary);
+    width: 7.5%;
+}
+
+.change-input {
+    width: 79.8%;
 }
 
 #up-mov {
+    background-color: var(--primary);
+    border: 0.5rem solid var(--primary);
+    border-radius: 0 0 4rem 4rem;
+}
 
+#up-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2.5rem;
 }
 
 #del-mov {
-
+    background-color: var(--primary);
+    border: 0.5rem solid var(--primary);
+    border-radius: 0 0 4rem 4rem;
 }
 
+#del-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2.5rem;
+}
+
+.sub-change {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5rem 0 5rem 0;
+}
+
+.movie-change-btn {
+    width: 25%;
+    padding: 0;
+}
 
 /* End of Page Sections */
