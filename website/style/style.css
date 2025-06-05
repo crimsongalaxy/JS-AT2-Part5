@@ -35,7 +35,7 @@
     --secondary:   #FDE73C;
     --tertiary:    #642F66; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
     --brand:       #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
-    --accent:      #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
+    --accent:      #0C3048; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
     --special:     #71440D; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
     --success:     #198754;
     --info:        #0dcaf0;
@@ -152,7 +152,7 @@ button {
     /* color: var(--placeholder); */
     /* border: none; */
     cursor: pointer;
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
 }
 
 /* button:hover, button:focus {
@@ -432,5 +432,73 @@ p {
 #movie-table thead {
     background-color: var(--special);
 }
+
+#movie-change {
+    margin-top: 7.5rem;
+    /* color: var(--primary);
+    border: 1rem solid var(--primary);
+    border-radius: 4rem; */
+}
+
+#tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#add-btn {
+    background-color: var(--accent);
+    color: var(--secondary);
+    border: 0.5rem solid var(--accent);
+    border-radius: 4rem 0 0 0;
+    width: calc(100% / 3);
+}
+
+#add-btn:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+#up-btn {
+    background-color: var(--accent);
+    color: var(--secondary);
+    border: 0.5rem solid var(--accent);
+    border-radius: 0;
+    width: calc(100% / 3);
+}
+
+#up-btn:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+#del-btn {
+    background-color: var(--accent);
+    color: var(--secondary);
+    border: 0.5rem solid var(--accent);
+    border-radius: 0 4rem 0 0;
+    width: calc(100% / 3);
+}
+
+#del-btn:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+#add-mov {
+
+}
+
+#up-mov {
+
+}
+
+#del-mov {
+
+}
+
 
 /* End of Page Sections */
