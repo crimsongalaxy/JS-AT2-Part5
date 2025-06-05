@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 
-/* Root variables */
+/* Root Variables */
 
 :root {
     /* Font & Text */
@@ -31,9 +31,9 @@
 
     /* Theme Colors */
     --placeholder: #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
-    --primary:     #0d6efd;
-    --secondary:   #6c757d;
-    --tertiary:    #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
+    --primary:     #1F5979;
+    --secondary:   #FDE73C;
+    --tertiary:    #642F66; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
     --brand:       #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
     --accent:      #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
     --special:     #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
@@ -72,7 +72,7 @@
     --link-hover-color: #0a58ca;
 }
 
-
+/* End of Root Variables */
 
 
 
@@ -135,6 +135,7 @@ footer {
 
 
 /* Other Elements (in alphabetical order) */
+
 a {
     font-size: var(--fs00);
     color: #0645AD; /* Clear, accessible blue */
@@ -173,7 +174,7 @@ input, textarea, select, button {
 
 h1 {
     display: block;
-    font-size: var(--fs32);
+    font-size: var(--fs48);
     font-weight: bold;
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing);
@@ -267,3 +268,53 @@ p {
     margin-block-end: 1em;
     margin-bottom: 1rem;
 }
+
+/* End of CSS resets */
+
+
+
+/* Utilities */
+
+/* End of Utilities */
+
+
+
+/* Components */
+
+.container {
+    width: 80vw;
+}
+
+/* End of Components */
+
+
+
+/* Page Sections */
+
+#body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* Header */
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    height: 10rem;
+    margin-top: 3rem;
+    border-radius: 4rem;
+}
+
+#header h1 {
+    margin: 0;
+}
+
+
+/* End of Page Sections */
