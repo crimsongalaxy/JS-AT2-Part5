@@ -1,4 +1,5 @@
 
+// array of mock data
 const films = [
 {"movieID":305,"movieTitle":"Amen.","movieYear":2012,"movieRating":4},
 {"movieID":470,"movieTitle":"I Spy","movieYear":1988,"movieRating":3},
@@ -51,3 +52,25 @@ const films = [
 {"movieID":300,"movieTitle":"My Joy (Schastye moe)","movieYear":1987,"movieRating":3},
 {"movieID":144,"movieTitle":"Prize of Peril, The (Prix du danger, Le)","movieYear":2012,"movieRating":4}
 ];
+
+
+// find the body of the movie-table in the HTML
+const mTable = document.querySelector('#movie-table tbody');
+
+// loop the array to get the data for each movie
+films.forEach(function(movie) {
+
+    // create a blank row
+    const newRow = document.createElement('tr');
+
+    // add the data into the blank row
+    newRow.innerHTML = `
+        <td>${movie.movieID}</td>
+        <td>${movie.movieTitle}</td>
+        <td>${movie.movieYear}</td>
+        <td>${movie.movieRating}</td>
+    `;
+
+    // add the populated row into the mTable variable
+    mTable.appendChild(newRow);
+});

@@ -420,7 +420,8 @@ p {
     border: 1rem solid var(--secondary);
     border-radius: 4rem;
     margin-top: 7.5rem;
-    height: 500px;
+    padding-bottom: 5rem;
+    height: auto;
 }
 
 #movie-table {
