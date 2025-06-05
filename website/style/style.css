@@ -556,4 +556,15 @@ p {
     padding: 0;
 }
 
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7.5rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--primary);
+    border-radius: 4rem 4rem 0 0;
+}
+
 /* End of Page Sections */
