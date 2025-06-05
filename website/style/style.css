@@ -403,7 +403,7 @@ p {
     width: 100%;
 }
 
-#sort-btns a {
+#sort-btns button {
     display: flex;
     justify-content: center;
     align-items: center;

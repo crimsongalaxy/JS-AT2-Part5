@@ -23,9 +23,9 @@
                     <h2>Movie search</h2>
                 </div>
                 <form action="#" id="search-form">
-                    <label for="sterm"></label>
+                    <label for="search-string"></label>
                     <input id="search-field" type="text" placeholder="Search...">
-                    <input id="search-btn" class="btnD" type="submit" value="Search">
+                    <button type="button" name="search" onclick="" id="search-btn" class="btnD">Search</button>
                 </form>
                 <div>
                 </div>
@@ -35,9 +35,9 @@
                     <h2>List sort</h2>
                 </div>
                 <div id="sort-btns">
-                    <a href="#" class=" btnL">A-Z</a>
-                    <a href="#" class=" btnL">Z-A</a>
-                    <a href="#" class=" btnL">Rating</a>
+                    <button type="button" name="sortAZ" onclick="" class="btnL">A-Z</button>
+                    <button type="button" name="sortZA" onclick="" class="btnL">Z-A</button>
+                    <button type="button" name="sortRat" onclick="" class="btnL">Rating</button>
                 </div>
             </section>
         </section>
@@ -66,15 +66,15 @@
         <section id="movie-change" class="container">
             <!-- tabs for selecting the form -->
             <section id="tabs">
-                <button id="add-btn">Add a movie</button>
-                <button id="up-btn">Update a movie</button>
-                <button id="del-btn">Delete a movie</button>
+                <button type="button" name="addMovie" onclick="" id="add-btn">Add a movie</button>
+                <button type="button" name="upMovie" onclick="" id="up-btn">Update a movie</button>
+                <button type="button" name="delMovie" onclick="" id="del-btn">Delete a movie</button>
             </section>
             <!-- end of the tabs section -->
 
             <!-- start of the add form -->
             <section id="add-mov" class="container">
-                <form id="add-form" action="#">
+                <form id="add-form">
                     <div class="change-div">
                         <label for="mID" class="change-label">ID</label>
                         <input type="text" placeholder="ID" class="change-input">
@@ -92,7 +92,7 @@
                         <input type="text" placeholder="Rating" class="change-input">
                     </div>
                     <div class="sub-change">
-                        <input type="submit" value="Add movie" class="btnL movie-change-btn">
+                        <button type="button" name="addNewMovie" onclick="" class="btnL movie-change-btn">Add movie</button>
                     </div>
                 </form>
             </section>
@@ -100,7 +100,7 @@
 
             <!-- start of the update form -->
             <section id="up-mov" class="container">
-                <form id="up-form" action="#">
+                <form id="up-form">
                     <div class="change-div">
                         <label for="mID" class="change-label">ID</label>
                         <input type="text" placeholder="ID" class="change-input">
@@ -118,7 +118,7 @@
                         <input type="text" placeholder="Rating" class="change-input">
                     </div>
                     <div class="sub-change">
-                        <input type="submit" value="Update movie" class="btnL movie-change-btn">
+                        <button type="button" name="updateMovie" onclick="" class="btnL movie-change-btn">Update movie</button>
                     </div>
                 </form>
             </section>
@@ -126,13 +126,13 @@
 
             <!-- start of the delete form -->
             <section id="del-mov" class="container">
-                <form id="del-form" action="#">
+                <form id="del-form">
                     <div class="change-div">
                         <label for="mID" class="change-label">ID</label>
                         <input type="text" placeholder="ID" class="change-input">
                     </div>
                     <div class="sub-change">
-                        <input type="submit" value="Delete movie" class="btnL movie-change-btn">
+                        <button type="button" name="DeleteMovie" onclick="" class="btnL movie-change-btn">Delete movie</button>
                     </div>
                 </form>
             </section>
