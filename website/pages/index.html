@@ -63,8 +63,80 @@
         <!-- end of the movie list section -->
         
         <!-- start of the list change section -->
-        <section>
+        <section id="movie-change" class="container">
+            <!-- tabs for selecting the form -->
+            <section id="tabs">
+                <button id="add-btn">Add a movie</button>
+                <button id="up-btn">Update a movie</button>
+                <button id="del-btn">Delete a movie</button>
+            </section>
+            <!-- end of the tabs section -->
 
+            <!-- start of the add form -->
+            <section id="add-mov" class="container">
+                <form id="add-form" action="#">
+                    <div class="change-div">
+                        <label for="mID" class="change-label">ID</label>
+                        <input type="text" placeholder="ID" class="change-input">
+                    </div>
+                    <div class="change-div">
+                        <label for="mTitle" class="change-label">Title</label>
+                        <input type="text" placeholder="Title" class="change-input">
+                    </div>
+                    <div class="change-div">
+                        <label for="mYear" class="change-label">Year</label>
+                        <input type="text" placeholder="Year" class="change-input">
+                    </div>
+                    <div class="change-div">
+                        <label for="mRat" class="change-label">Rating</label>
+                        <input type="text" placeholder="Rating" class="change-input">
+                    </div>
+                    <div class="sub-change">
+                        <input type="submit" value="Add movie" class="btnL movie-change-btn">
+                    </div>
+                </form>
+            </section>
+            <!-- end of the add from -->
+
+            <!-- start of the update form -->
+            <section id="up-mov" class="container">
+                <form id="up-form" action="#">
+                    <div class="change-div">
+                        <label for="mID" class="change-label">ID</label>
+                        <input type="text" placeholder="ID" class="change-input">
+                    </div>
+                    <div class="change-div">
+                        <label for="mTitle" class="change-label">Title</label>
+                        <input type="text" placeholder="Title" class="change-input">
+                    </div>
+                    <div class="change-div">
+                        <label for="mYear" class="change-label">Year</label>
+                        <input type="text" placeholder="Year" class="change-input">
+                    </div>
+                    <div class="change-div">
+                        <label for="mRat" class="change-label">Rating</label>
+                        <input type="text" placeholder="Rating" class="change-input">
+                    </div>
+                    <div class="sub-change">
+                        <input type="submit" value="Update movie" class="btnL movie-change-btn">
+                    </div>
+                </form>
+            </section>
+            <!-- end of the update form -->
+
+            <!-- start of the delete form -->
+            <section id="del-mov" class="container">
+                <form id="del-form" action="#">
+                    <div class="change-div">
+                        <label for="mID" class="change-label">ID</label>
+                        <input type="text" placeholder="ID" class="change-input">
+                    </div>
+                    <div class="sub-change">
+                        <input type="submit" value="Delete movie" class="btnL movie-change-btn">
+                    </div>
+                </form>
+            </section>
+            <!-- end of the delete form -->
         </section>
         <!-- end of the list change section -->
     </main>
