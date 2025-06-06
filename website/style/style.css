@@ -403,7 +403,7 @@ p {
     width: 100%;
 }
 
-#sort-btns a {
+#sort-btns button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -420,7 +420,8 @@ p {
     border: 1rem solid var(--secondary);
     border-radius: 4rem;
     margin-top: 7.5rem;
-    height: 500px;
+    padding-bottom: 5rem;
+    height: auto;
 }
 
 #movie-table {
@@ -433,6 +434,49 @@ p {
     background-color: var(--special);
 }
 
+#columnID {
+    width: 6%;
+    text-align: center;
+}
+
+#columnTitle {
+    width: 40%;
+    text-align: center;
+}
+
+#columnYear {
+    width: 7%;
+    text-align: center;
+}
+
+#columnRating {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+#movie-table tbody tr:nth-child(odd) {
+    background-color: var(--secondary);
+    color: var(--accent);
+}
+
+#movie-table tbody tr:nth-child(even) {
+    background-color: var(--accent);
+    color: var(--secondary);
+}
+
+#movie-table tr td:nth-child(1), td:nth-child(3) {
+    text-align: center;
+}
+
+#movie-table tr td:nth-child(2) {
+    padding-left: 1rem;
+}
+
+#movie-table tr td:nth-child(4) {
+    padding-left: 4rem;
+}
+
+
 #movie-change {
     margin-top: 7.5rem;
     /* color: var(--primary);
@@ -440,7 +484,7 @@ p {
     border-radius: 4rem; */
 }
 
-#tabs {
+.tabs {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -495,12 +539,31 @@ p {
     border-radius: 0 0 4rem 4rem;
 }
 
-#add-form {
+.tabs button:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+/* .tab-form {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2.5rem;
+} */
+
+
+
+
+
+
+
+/* #add-form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 2.5rem;
-}
+} */
 
 .change-div {
     display: flex;
@@ -524,12 +587,12 @@ p {
     border-radius: 0 0 4rem 4rem;
 }
 
-#up-form {
+/* #up-form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 2.5rem;
-}
+} */
 
 #del-mov {
     background-color: var(--primary);
@@ -537,12 +600,12 @@ p {
     border-radius: 0 0 4rem 4rem;
 }
 
-#del-form {
+/* #del-form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 2.5rem;
-}
+} */
 
 .sub-change {
     display: flex;
