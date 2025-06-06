@@ -1,5 +1,18 @@
 // 
 
+// create an array of movies
+const films = [
+{"movieID":305,"movieTitle":"Amen.","movieYear":2012,"movieRating":4},
+{"movieID":470,"movieTitle":"I Spy","movieYear":1988,"movieRating":3},
+{"movieID":413,"movieTitle":"Silent Night, Bloody Night","movieYear":2001,"movieRating":4},
+{"movieID":495,"movieTitle":"Eden","movieYear":1997,"movieRating":1},
+{"movieID":213,"movieTitle":"Shiver (Eskalofrío)","movieYear":1966,"movieRating":3},
+{"movieID":224,"movieTitle":"Demon Wind","movieYear":2000,"movieRating":3},
+{"movieID":493,"movieTitle":"Finding Fela!","movieYear":1995,"movieRating":1},
+{"movieID":106,"movieTitle":"Dodsworth","movieYear":1993,"movieRating":3},
+{"movieID":222,"movieTitle":"Flash of Genius","movieYear":2005,"movieRating":5},
+{"movieID":272,"movieTitle":"Bachelor Apartment","movieYear":2002,"movieRating":5},
+];
 
 
 // Function openForm()
