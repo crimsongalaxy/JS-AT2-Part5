@@ -434,6 +434,26 @@ p {
     background-color: var(--special);
 }
 
+#columnID {
+    width: 6%;
+    text-align: center;
+}
+
+#columnTitle {
+    width: 40%;
+    text-align: center;
+}
+
+#columnYear {
+    width: 7%;
+    text-align: center;
+}
+
+#columnRating {
+    text-align: left;
+    padding-left: 1rem;
+}
+
 #movie-table tbody tr:nth-child(odd) {
     background-color: var(--secondary);
     color: var(--accent);
@@ -443,6 +463,23 @@ p {
     background-color: var(--accent);
     color: var(--secondary);
 }
+
+#movie-table tbody td {
+    /* padding-left: 1rem; */
+}
+
+#movie-table tr td:nth-child(1), td:nth-child(3) {
+    text-align: center;
+}
+
+#movie-table tr td:nth-child(2) {
+    padding-left: 1rem;
+}
+
+#movie-table tr td:nth-child(4) {
+    padding-left: 4rem;
+}
+
 
 #movie-change {
     margin-top: 7.5rem;
