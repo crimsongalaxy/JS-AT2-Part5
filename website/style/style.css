@@ -464,10 +464,6 @@ p {
     color: var(--secondary);
 }
 
-#movie-table tbody td {
-    /* padding-left: 1rem; */
-}
-
 #movie-table tr td:nth-child(1), td:nth-child(3) {
     text-align: center;
 }
