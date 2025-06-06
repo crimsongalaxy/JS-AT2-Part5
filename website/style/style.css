@@ -441,7 +441,7 @@ p {
     border-radius: 4rem; */
 }
 
-#tabs {
+.tabs {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -496,12 +496,31 @@ p {
     border-radius: 0 0 4rem 4rem;
 }
 
-#add-form {
+.tabs button:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+/* .tab-form {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2.5rem;
+} */
+
+
+
+
+
+
+
+/* #add-form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 2.5rem;
-}
+} */
 
 .change-div {
     display: flex;
@@ -525,12 +544,12 @@ p {
     border-radius: 0 0 4rem 4rem;
 }
 
-#up-form {
+/* #up-form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 2.5rem;
-}
+} */
 
 #del-mov {
     background-color: var(--primary);
@@ -538,12 +557,12 @@ p {
     border-radius: 0 0 4rem 4rem;
 }
 
-#del-form {
+/* #del-form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 2.5rem;
-}
+} */
 
 .sub-change {
     display: flex;

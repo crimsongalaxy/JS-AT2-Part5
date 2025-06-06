@@ -65,15 +65,15 @@
         <!-- start of the list change section -->
         <section id="movie-change" class="container">
             <!-- tabs for selecting the form -->
-            <section id="tabs">
-                <button type="button" name="addMovie" onclick="" id="add-btn">Add a movie</button>
-                <button type="button" name="upMovie" onclick="" id="up-btn">Update a movie</button>
-                <button type="button" name="delMovie" onclick="" id="del-btn">Delete a movie</button>
+            <section class="tabs">
+                <button type="button" name="addMovie" onclick="openForm(event, 'Add')" id="add-btn" class="tabButton">Add a movie</button>
+                <button type="button" name="upMovie" onclick="openForm(event, 'Update')" id="up-btn" class="tabButton">Update a movie</button>
+                <button type="button" name="delMovie" onclick="openForm(event, 'Delete')" id="del-btn" class="tabButton">Delete a movie</button>
             </section>
             <!-- end of the tabs section -->
 
             <!-- start of the add form -->
-            <section id="add-mov" class="container">
+            <section id="add-mov" class="tab-form container">
                 <form id="add-form">
                     <div class="change-div">
                         <label for="mID" class="change-label">ID</label>
@@ -99,7 +99,7 @@
             <!-- end of the add from -->
 
             <!-- start of the update form -->
-            <section id="up-mov" class="container">
+            <section id="up-mov" class="tab-form container">
                 <form id="up-form">
                     <div class="change-div">
                         <label for="mID" class="change-label">ID</label>
@@ -125,7 +125,7 @@
             <!-- end of the update form -->
 
             <!-- start of the delete form -->
-            <section id="del-mov" class="container">
+            <section id="del-mov" class="tab-form container">
                 <form id="del-form">
                     <div class="change-div">
                         <label for="mID" class="change-label">ID</label>
@@ -148,6 +148,7 @@
     </footer>
 
     <!-- Link to javascript code. Always place this as the last thing in the body -->
-    <script src="/website/scripts/scripts.js"></script>
+    <script src="/website/scripts/film.js"></script>
+    <script src="/website/scripts/app.js"></script>
 </body>
 </html>
