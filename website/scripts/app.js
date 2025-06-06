@@ -15,6 +15,42 @@ const films = [
 ];
 
 
+
+// sort the array data by movieID, in ascending order, to serve as the default sort order when the page is loaded
+const sortedFilms = films.sort(function(a, b) {
+    return a.movieID - b.movieID;
+});
+
+
+
+// add the data from the array onto the page
+
+// find the body of the movie-table in the HTML
+const mTable = document.querySelector('#movie-table tbody');
+
+// loop the array to get the data for each movie
+films.forEach(function(movie) {
+
+    // create a blank row
+    const newRow = document.createElement('tr');
+
+    // add the data into the blank row
+    newRow.innerHTML = `
+        <td>${movie.movieID}</td>
+        <td>${movie.movieTitle}</td>
+        <td>${movie.movieYear}</td>
+        <td>${movie.movieRating}</td>
+    `;
+
+    // add the populated row into the mTable variable
+    mTable.appendChild(newRow);
+});
+
+
+
+
+
+
 // Function openForm()
 // Takes in 2 parameters, and event and an action
 // Returns nothing.

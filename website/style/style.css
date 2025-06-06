@@ -434,6 +434,16 @@ p {
     background-color: var(--special);
 }
 
+#movie-table tbody tr:nth-child(odd) {
+    background-color: var(--secondary);
+    color: var(--accent);
+}
+
+#movie-table tbody tr:nth-child(even) {
+    background-color: var(--accent);
+    color: var(--secondary);
+}
+
 #movie-change {
     margin-top: 7.5rem;
     /* color: var(--primary);
