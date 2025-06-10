@@ -435,6 +435,10 @@ p {
     justify-content: center;
 }
 
+.tab-form {
+    display: none;
+}
+
 #add-btn {
     background-color: var(--accent);
     color: var(--secondary);
