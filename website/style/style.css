@@ -441,7 +441,7 @@ p {
     border: 0.5rem solid var(--secondary);
 }
 
-#defaultOpen {
+/* #defaultOpen {
     background-color: var(--primary);
     color: var(--secondary);
     border: 0.5rem solid var(--primary);
@@ -453,21 +453,7 @@ p {
     background-color: var(--tertiary);
     color: var(--secondary);
     border: 0.5rem solid var(--secondary);
-}
-
-#activeTab {
-    background-color: var(--primary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--primary);
-    border-radius: 4rem 0 0 0;
-    width: calc(100% / 3);
-}
-
-#activeTab:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-}
+} */
 
 .tabForm {
     /* display: true; */
@@ -516,7 +502,7 @@ p {
     border: 0.5rem solid var(--secondary);
 } */
 
-#add-mov {
+#addMov {
     background-color: var(--primary);
     border: 0.5rem solid var(--primary);
     border-radius: 0 0 4rem 4rem;
@@ -544,16 +530,20 @@ p {
     width: 79.8%;
 }
 
-#up-mov {
+#upMov {
     background-color: var(--primary);
     border: 0.5rem solid var(--primary);
     border-radius: 0 0 4rem 4rem;
 }
 
-#del-mov {
+#delMov {
     background-color: var(--primary);
     border: 0.5rem solid var(--primary);
     border-radius: 0 0 4rem 4rem;
+}
+
+.bbm {
+    margin-bottom: 26rem;
 }
 
 .sub-change {
@@ -566,6 +556,18 @@ p {
 .movie-change-btn {
     width: 25%;
     padding: 0;
+}
+
+.activeTab {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+}
+
+.activeTab:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 #footer {

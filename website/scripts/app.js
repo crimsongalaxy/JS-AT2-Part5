@@ -33,16 +33,16 @@ function openForm(evt, action) {
     }
 
     // Get all the elements that have the classname of tabButton and remove the class of active
-    tabButton = document.getElementsByClassName(tabButton);
+    tabButton = document.getElementsByClassName('tabButton');
     for(i = 0; i < tabButton.length; i++) {
         // remove the active class
-        tabButton[i].classname = tabButton[i].classname.replace("active", "");
+        tabButton[i].className = tabButton[i].className.replace("activeTab", "");
     }
 
     // Show the current tab and add the active class to the button that opened the tabForm
     // If this doesn't work go back to 2:15:00 in the video
-    document.getElementById(action).style.display = "true";
-    evt.currentTarget.className += " active";
+    document.getElementById(action).style.display = "block";
+    evt.currentTarget.className += " activeTab";
 }
 // End of the openForm function
 
