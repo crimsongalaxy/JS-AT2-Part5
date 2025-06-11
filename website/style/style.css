@@ -435,11 +435,46 @@ p {
     justify-content: center;
 }
 
-.tab-form {
+.tabButton {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+#defaultOpen {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--primary);
+    border-radius: 4rem 0 0 0;
+    width: calc(100% / 3);
+}
+
+#defaultOpen:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+#activeTab {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--primary);
+    border-radius: 4rem 0 0 0;
+    width: calc(100% / 3);
+}
+
+#activeTab:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+.tabForm {
+    /* display: true; */
     display: none;
 }
 
-#add-btn {
+.add-btn {
     background-color: var(--accent);
     color: var(--secondary);
     border: 0.5rem solid var(--accent);
@@ -447,13 +482,13 @@ p {
     width: calc(100% / 3);
 }
 
-#add-btn:hover {
+/* .add-btn:hover {
     background-color: var(--tertiary);
     color: var(--secondary);
     border: 0.5rem solid var(--secondary);
-}
+} */
 
-#up-btn {
+.up-btn {
     background-color: var(--accent);
     color: var(--secondary);
     border: 0.5rem solid var(--accent);
@@ -461,13 +496,13 @@ p {
     width: calc(100% / 3);
 }
 
-#up-btn:hover {
+/* .up-btn:hover {
     background-color: var(--tertiary);
     color: var(--secondary);
     border: 0.5rem solid var(--secondary);
-}
+} */
 
-#del-btn {
+.del-btn {
     background-color: var(--accent);
     color: var(--secondary);
     border: 0.5rem solid var(--accent);
@@ -475,11 +510,11 @@ p {
     width: calc(100% / 3);
 }
 
-#del-btn:hover {
+/* .del-btn:hover {
     background-color: var(--tertiary);
     color: var(--secondary);
     border: 0.5rem solid var(--secondary);
-}
+} */
 
 #add-mov {
     background-color: var(--primary);
