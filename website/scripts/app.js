@@ -1,4 +1,16 @@
 // Create an array of movies
+let initMovies = [
+    {movieID : 4545, title : 'Stargate', year : 1994, rating : 6},
+    {movieID : 9874, title : 'Aladdin', year : 1992, rating : 10},
+    {movieID : 3248, title : 'The Matrix', year : 1999, rating : 9},
+    {movieID : 8541, title : 'Waterworld', year : 1995, rating : 6},
+    {movieID : 3465, title : 'Watership Down', year : 1984, rating : 7},
+    {movieID : 6577, title : 'The Shawshank Redemption', year : 1994, rating : 10},
+    {movieID : 7460, title : 'Fight Club', year : 1999, rating : 10},
+    {movieID : 1687, title : 'Transformers: The Movie', year : 1994, rating : 6},
+    {movieID : 5521, title : 'Poolhall Junkies', year : 2002, rating : 8},
+    {movieID : 2467, title : 'Green Street Hooligans', year : 2005, rating : 8}
+]
 
 // Create an instance of the MovieList class
 // MovieList takes in the rootId and the movie array
