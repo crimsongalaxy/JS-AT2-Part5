@@ -12,6 +12,9 @@ let initMovies = [
     {movieID : 2467, title : 'Green Street Hooligans', year : 2005, rating : 8}
 ]
 
+
+
+
 // Create an instance of the MovieList class
 // MovieList takes in the rootId and the movie array
 
