@@ -1,38 +1,23 @@
 // Create an array of movies
 let initMovies = [
-    {movieID : 4545, title : 'Stargate', year : 1994, rating : 6},
-    {movieID : 9874, title : 'Aladdin', year : 1992, rating : 10},
-    {movieID : 3248, title : 'The Matrix', year : 1999, rating : 9},
-    {movieID : 8541, title : 'Waterworld', year : 1995, rating : 6},
-    {movieID : 3465, title : 'Watership Down', year : 1984, rating : 7},
-    {movieID : 6577, title : 'The Shawshank Redemption', year : 1994, rating : 10},
-    {movieID : 7460, title : 'Fight Club', year : 1999, rating : 10},
-    {movieID : 1687, title : 'Transformers: The Movie', year : 1994, rating : 6},
-    {movieID : 5521, title : 'Poolhall Junkies', year : 2002, rating : 8},
-    {movieID : 2467, title : 'Green Street Hooligans', year : 2005, rating : 8}
+    {movieID : 4545, movieTitle : 'Stargate', movieYear : 1994, movieRating : 6},
+    {movieID : 9874, movieTitle : 'Aladdin', movieYear : 1992, movieRating : 10},
+    {movieID : 3248, movieTitle : 'The Matrix', movieYear : 1999, movieRating : 9},
+    {movieID : 8541, movieTitle : 'Waterworld', movieYear : 1995, movieRating : 6},
+    {movieID : 3465, movieTitle : 'Watership Down', movieYear : 1984, movieRating : 7},
+    {movieID : 6577, movieTitle : 'The Shawshank Redemption', movieYear : 1994, movieRating : 10},
+    {movieID : 7460, movieTitle : 'Fight Club', movieYear : 1999, movieRating : 10},
+    {movieID : 1687, movieTitle : 'Transformers: The Movie', movieYear : 1994, movieRating : 6},
+    {movieID : 5521, movieTitle : 'Poolhall Junkies', movieYear : 2002, movieRating : 8},
+    {movieID : 2467, movieTitle : 'Green Street Hooligans', movieYear : 2005, movieRating : 8}
 ]
 
 
 
-
-// Create an instance of the MovieList class
-// MovieList takes in the rootId and the movie array
-
-// Event functions
-// Search click
-// A - Z click
-// Z - A click
-
-// Add a new movie to the list
-
-// Update a movie in the list
-
-// Delete a movie from the list
-
 // UI Javascript
 // Tabs section
 // Function openForm
-// Take in 2 parameters, and event and an action
+// Take in 2 parameters, an event and an action
 // Return nothing
 function openForm(evt, action) {
     // declare variables
@@ -64,6 +49,86 @@ function openForm(evt, action) {
 // Open tab by default
 document.getElementById('defaultOpen').click();
 
+
+
+
+
+
+
+
+
+
+
+const sortFilmsIDAsc = initMovies.sort(function(a, b) {
+    return a.movieID - b.movieID;
+});
+
+
+
+// // find the body of the movie-table in the HTML
+// let movTable = document.querySelector('#mTableBody');
+// console.log('Found:', movTable);
+
+// // loop the array to get the data for each movie
+// initMovies.forEach(function(movie) {
+
+//     // create a blank row
+//     const newRow = document.createElement('tr');
+
+//     // add the data into the blank row
+//     newRow.innerHTML = `
+//         <td>${movie.movieID}</td>
+//         <td>${movie.movieTitle}</td>
+//         <td>${movie.movieYear}</td>
+//         <td>${movie.movieRating}</td>
+//     `;
+
+//     // add the populated row into the mTable variable
+//     movTable.appendChild(newRow);
+// });
+
+
+
+
+
+
+
+// Create an instance of the MovieList class
+// MovieList takes in the rootId and the movie array
+let movieList = new MovieList('#mTableBody', initMovies);
+
+// Event functions
+// Search click
+// A - Z click
+// Z - A click
+
+// Add a new movie to the list
+
+// Update a movie in the list
+
+// Delete a movie from the list
+
+
 // Footer
 // Inject the date into the footer
 // I'm not doing this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
