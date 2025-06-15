@@ -72,6 +72,30 @@ function addClick() {
 }
 
 // Update a movie in the list
+function upClick() {
+    // Get the form elements from the DOM
+    console.log(`You called the upClick function.`);
+    let formElements = document.getElementById("up-form").elements;
+    // Get the id
+    let id = formElements["ID"].value;
+    // Get the title
+    let title = formElements["title"].value;
+    // Get the year
+    let year = formElements["year"].value;
+    // Get the rating
+    let rating = formElements["rating"].value;
+
+    // save the new movie
+    movieList.update(Number(id), title, Number(year), Number(rating));
+
+    // clear the input fields
+    formElements.ID.value = "";
+    formElements.title.value = "";
+    formElements.year.value = "";
+    formElements.rating.value = "";
+
+    console.log(`This is the end of the addClick function.`);
+}
 
 // Delete a movie from the list
 

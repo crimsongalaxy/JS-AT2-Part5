@@ -106,6 +106,8 @@ class MovieList {
         // add the new list
         this.genMovieTable();
     }
+
+
     // Add function
     add(id, title, year, rating) {
         console.log(`You called the add function.`);
@@ -116,8 +118,45 @@ class MovieList {
     }
 
 
+
+    // Create a sequential search function to find a movies index from its ID.
+    // Create the search algorithm 
+    findIndex(arraySearch, target){
+        // Default value to indicate the key was not found.
+        let found = -1;
+        // Loop the array to find the key.
+        for (let i = 0; i < arraySearch.length; i++) {
+            // If the key is found store the index in the "found" variable (replacing the default value), and break the loop.
+            if(arraySearch[i].movieID == target) {
+                found = i;
+                break;
+            }
+        }
+        return found;
+    }
+
+
     // Update function
+    update(ID, title, year, rating) {
+        // find the index that matches the ID
+        const index = this.findIndex(this.movieList, ID);
+        // update the title
+        this.movieList[index].movieTitle = title;
+        // update the year
+        this.movieList[index].movieYear = year;
+        // update the rating
+        this.movieList[index].movieRating = rating;
+        // refresh the list
+        this.refresh();
+    }
+
     // Delete function
+    delete(ID) {
+        // Remove a movie from the array
+        this.movieList.splice(ID, 1);
+        // Refresh
+        this.refresh();
+    }
 
     // Sort A - Z
     // Sort Z - A
