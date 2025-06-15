@@ -78,12 +78,25 @@ class MovieList {
 
     // Generate the movieList based on search term
 
-    // Remove all list element from the DOM
+    // Remove all list element from the DOM >>> Pretty sure I don't need to do this because I used a different logic.
+
+
+
     // Refresh function
     refresh() {
+        console.log(`You called the refresh function.`);
         this.genMovieTable();
     }
     // Add function
+    add(id, title, year, rating) {
+        console.log(`You called the add function.`);
+        // add a new movie to the end
+        this.movieList.push({id: id, title: title, year: year, rating: rating});
+        console.log(`A new movie should have been added.`);
+        this.refresh(); // not sure if I will need this
+    }
+
+
     // Update function
     // Delete function
 

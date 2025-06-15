@@ -14,6 +14,46 @@ let initMovies = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+// const sortFilmsIDAsc = initMovies.sort(function(a, b) {
+//     return a.movieID - b.movieID;
+// });
+
+
+
+
+
+
+
+
+
+// Create an instance of the MovieList class
+// MovieList takes in the rootId and the movie array
+let movieList = new MovieList('#mTableBody', initMovies);
+
+// Event functions
+// Search click
+// A - Z click
+// Z - A click
+
+// Add a new movie to the list
+
+// Update a movie in the list
+
+// Delete a movie from the list
+
+
+
+
 // UI Javascript
 // Tabs section
 // Function openForm
@@ -48,65 +88,6 @@ function openForm(evt, action) {
 
 // Open tab by default
 document.getElementById('defaultOpen').click();
-
-
-
-
-
-
-
-
-
-
-
-const sortFilmsIDAsc = initMovies.sort(function(a, b) {
-    return a.movieID - b.movieID;
-});
-
-
-
-// // find the body of the movie-table in the HTML
-// let movTable = document.querySelector('#mTableBody');
-// console.log('Found:', movTable);
-
-// // loop the array to get the data for each movie
-// initMovies.forEach(function(movie) {
-
-//     // create a blank row
-//     const newRow = document.createElement('tr');
-
-//     // add the data into the blank row
-//     newRow.innerHTML = `
-//         <td>${movie.movieID}</td>
-//         <td>${movie.movieTitle}</td>
-//         <td>${movie.movieYear}</td>
-//         <td>${movie.movieRating}</td>
-//     `;
-
-//     // add the populated row into the mTable variable
-//     movTable.appendChild(newRow);
-// });
-
-
-
-
-
-
-
-// Create an instance of the MovieList class
-// MovieList takes in the rootId and the movie array
-let movieList = new MovieList('#mTableBody', initMovies);
-
-// Event functions
-// Search click
-// A - Z click
-// Z - A click
-
-// Add a new movie to the list
-
-// Update a movie in the list
-
-// Delete a movie from the list
 
 
 // Footer
