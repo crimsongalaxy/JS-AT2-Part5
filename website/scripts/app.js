@@ -46,6 +46,30 @@ let movieList = new MovieList('#mTableBody', initMovies);
 // Z - A click
 
 // Add a new movie to the list
+function addClick() {
+    // Get the form elements from the DOM
+    console.log(`You called the addClick function.`);
+    let formElements = document.getElementById("add-form").elements;
+    // Get the id
+    let id = formElements["ID"].value;
+    // Get the title
+    let title = formElements["title"].value;
+    // Get the year
+    let year = formElements["year"].value;
+    // Get the rating
+    let rating = formElements["rating"].value;
+
+    // save the new movie
+    movieList.add(Number(id), title, Number(year), Number(rating));
+
+    // clear the input fields
+    formElements.ID.value = "";
+    formElements.title.value = "";
+    formElements.year.value = "";
+    formElements.rating.value = "";
+
+    console.log(`This is the end of the addClick function.`);
+}
 
 // Update a movie in the list
 

@@ -91,7 +91,7 @@ class MovieList {
     add(id, title, year, rating) {
         console.log(`You called the add function.`);
         // add a new movie to the end
-        this.movieList.push({id: id, title: title, year: year, rating: rating});
+        this.movieList.push({movieID: id, movieTitle: title, year, movieYear: year, movieRating: rating});
         console.log(`A new movie should have been added.`);
         this.refresh(); // not sure if I will need this
     }
