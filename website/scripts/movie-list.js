@@ -153,7 +153,7 @@ class MovieList {
     // Delete function
     delete(ID) {
         // Remove a movie from the array
-        this.movieList.splice(ID, 1);
+        this.movieList.splice(this.findIndex(this.movieList, ID), 1);
         // Refresh
         this.refresh();
     }

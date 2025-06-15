@@ -94,10 +94,25 @@ function upClick() {
     formElements.year.value = "";
     formElements.rating.value = "";
 
-    console.log(`This is the end of the addClick function.`);
+    console.log(`This is the end of the upClick function.`);
 }
 
 // Delete a movie from the list
+function delClick() {
+    // Get the form elements from the DOM
+    console.log(`You called the delClick function.`);
+    let formElements = document.getElementById("del-form").elements;
+    // Get the id
+    let id = formElements["ID"].value;
+
+    // delete the movie
+    movieList.delete(Number(id));
+
+    // clear the input fields
+    formElements.ID.value = "";
+
+    console.log(`This is the end of the upClick function.`);
+}
 
 
 
