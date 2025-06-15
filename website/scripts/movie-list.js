@@ -54,6 +54,8 @@ class MovieList {
             console.log(`This is the 4th line of genMovieTable`);
             // create a blank row
             const newRow = document.createElement('tr');
+            // give the blank row the class of "row"
+            newRow.classList.add('row')
 
             console.log(`This is the 5th line of genMovieTable`);
             // add the data into the blank row
@@ -78,13 +80,30 @@ class MovieList {
 
     // Generate the movieList based on search term
 
-    // Remove all list element from the DOM >>> Pretty sure I don't need to do this because I used a different logic.
+    // Remove all list element from the DOM
+    removeElements() {
+        // find the parent
+        const rootElement = document.querySelector(this.htmlID);
+        // Get all elements with class of row
+        const childNodes = document.getElementsByClassName('row');
+        // how many do we have?
+        const len = childNodes.length -1;
+        for(let i = len; i >= 0; i--) {
+            // find last element in the array
+            const child = childNodes[i];
+            // remove that element
+            rootElement.removeChild(child);
+        }
+    }
 
 
 
     // Refresh function
     refresh() {
         console.log(`You called the refresh function.`);
+        // remove the current list
+        this.removeElements();
+        // add the new list
         this.genMovieTable();
     }
     // Add function
