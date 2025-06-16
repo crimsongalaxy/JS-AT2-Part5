@@ -264,6 +264,31 @@ p {
     border-radius: 1rem;
 }
 
+.btnO {
+    background-color: var(--primary);
+    color: var(--secondary);
+    width: 20rem;
+    height: 5rem;
+    margin: 1rem;
+    border: 0.3rem solid var(--primary);
+    border-radius: 1rem;
+    padding: 0;
+
+    
+    font-size: var(--fs24);
+    font-weight: bold;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
+}
+
+.btnO:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.3rem solid var(--secondary);
+    border-radius: 1rem;
+}
+
 /* End of Components */
 
 
