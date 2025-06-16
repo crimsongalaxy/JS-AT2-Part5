@@ -22,10 +22,10 @@
                 <div>
                     <h2>Movie search</h2>
                 </div>
-                <form action="#" id="search-form">
+                <form id="search-form">
                     <label for="search-string"></label>
-                    <input id="search-field" type="text" placeholder="Search...">
-                    <button type="button" name="search" onclick="" id="search-btn" class="btnD">Search</button>
+                    <input id="search-field" type="text" name="search" placeholder="Search...">
+                    <button type="button" onclick="searchClick()" id="search-btn" class="btnD">Search</button>
                 </form>
                 <div>
                 </div>
@@ -35,9 +35,9 @@
                     <h2>List sort</h2>
                 </div>
                 <div id="sort-btns">
-                    <button type="button" name="sortAZ" onclick="" class="btnL">A-Z</button>
-                    <button type="button" name="sortZA" onclick="" class="btnL">Z-A</button>
-                    <button type="button" name="sortRat" onclick="" class="btnL">Rating</button>
+                    <button type="button" name="sortAZ" onclick="azClick()" class="btnL">A-Z</button>
+                    <button type="button" name="sortZA" onclick="zaClick()" class="btnL">Z-A</button>
+                    <button type="button" name="sortRat" onclick="ratingClick()" class="btnL">Rating</button>
                 </div>
             </section>
         </section>
@@ -45,8 +45,10 @@
 
         <!-- start of the movie list section -->
         <section id="movie-list" class="container">
-            <h2>Movie List</h2>
-            <table id="movie-table" border="1">
+            <button type="button" name="refresh" onclick="refreshClick()" class="btnO">
+                Movie List
+            </button>
+            <table id="movie-table">
                 <thead>
                     <tr>
                         <th id="columnID">ID</th>
@@ -55,7 +57,7 @@
                         <th id="columnRating">Rating</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="mTableBody">
                 <!-- JavaScript will insert rows here -->
                 </tbody>
             </table>
@@ -66,18 +68,18 @@
         <section id="movie-change" class="container">
             <!-- tabs for selecting the form -->
             <section class="tabs">
-                <button type="button" name="addMovie" onclick="openForm(event, 'Add')" id="add-btn" class="tabButton">Add a movie</button>
-                <button type="button" name="upMovie" onclick="openForm(event, 'Update')" id="up-btn" class="tabButton">Update a movie</button>
-                <button type="button" name="delMovie" onclick="openForm(event, 'Delete')" id="del-btn" class="tabButton">Delete a movie</button>
+                <button type="button" name="addMovie" onclick="openForm(event, 'addMov')" id="defaultOpen" class="tabButton add-btn">Add a movie</button>
+                <button type="button" name="upMovie" onclick="openForm(event, 'upMov')" id="" class="tabButton up-btn activeTab">Update a movie</button>
+                <button type="button" name="delMovie" onclick="openForm(event, 'delMov')" id="" class="tabButton del-btn">Delete a movie</button>
             </section>
             <!-- end of the tabs section -->
 
             <!-- start of the add form -->
-            <section id="add-mov" class="tab-form container">
+            <section id="addMov" class="tabForm container">
                 <form id="add-form">
                     <div class="change-div">
                         <label for="mID" class="change-label">ID</label>
-                        <input type="text" placeholder="id" name="ID" class="change-input">
+                        <input type="text" placeholder="ID" name="ID" class="change-input">
                     </div>
                     <div class="change-div">
                         <label for="mTitle" class="change-label">Title</label>
@@ -92,47 +94,47 @@
                         <input type="text" placeholder="Rating" name="rating" class="change-input">
                     </div>
                     <div class="sub-change">
-                        <button type="button" name="addNewMovie" onclick="" class="btnL movie-change-btn">Add movie</button>
+                        <button type="button" name="addNewMovie" onclick="addClick()" class="btnL movie-change-btn">Add movie</button>
                     </div>
                 </form>
             </section>
             <!-- end of the add from -->
 
             <!-- start of the update form -->
-            <section id="up-mov" class="tab-form container">
+            <section id="upMov" class="tabForm container">
                 <form id="up-form">
                     <div class="change-div">
                         <label for="mID" class="change-label">ID</label>
-                        <input type="text" placeholder="ID" class="change-input">
+                        <input type="text" placeholder="ID" name="ID" class="change-input">
                     </div>
                     <div class="change-div">
                         <label for="mTitle" class="change-label">Title</label>
-                        <input type="text" placeholder="Title" class="change-input">
+                        <input type="text" placeholder="Title" name="title" class="change-input">
                     </div>
                     <div class="change-div">
                         <label for="mYear" class="change-label">Year</label>
-                        <input type="text" placeholder="Year" class="change-input">
+                        <input type="text" placeholder="Year" name="year" class="change-input">
                     </div>
                     <div class="change-div">
                         <label for="mRat" class="change-label">Rating</label>
-                        <input type="text" placeholder="Rating" class="change-input">
+                        <input type="text" placeholder="Rating" name="rating" class="change-input">
                     </div>
                     <div class="sub-change">
-                        <button type="button" name="updateMovie" onclick="" class="btnL movie-change-btn">Update movie</button>
+                        <button type="button" name="updateMovie" onclick="upClick()" class="btnL movie-change-btn">Update movie</button>
                     </div>
                 </form>
             </section>
             <!-- end of the update form -->
 
             <!-- start of the delete form -->
-            <section id="del-mov" class="tab-form container">
+            <section id="delMov" class="tabForm container">
                 <form id="del-form">
-                    <div class="change-div">
+                    <div class="change-div bbm">
                         <label for="mID" class="change-label">ID</label>
-                        <input type="text" placeholder="ID" class="change-input">
+                        <input type="text" placeholder="ID" name="ID" class="change-input">
                     </div>
                     <div class="sub-change">
-                        <button type="button" name="DeleteMovie" onclick="" class="btnL movie-change-btn">Delete movie</button>
+                        <button type="button" name="DeleteMovie" onclick="delClick()" class="btnL movie-change-btn">Delete movie</button>
                     </div>
                 </form>
             </section>
@@ -148,7 +150,7 @@
     </footer>
 
     <!-- Link to javascript code. Always place this as the last thing in the body -->
-    <script src="/website/scripts/film.js"></script>
+    <script src="/website/scripts/movie-list.js"></script>
     <script src="/website/scripts/app.js"></script>
 </body>
 </html>

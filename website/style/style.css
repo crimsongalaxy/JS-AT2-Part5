@@ -30,39 +30,11 @@
     --word-spacing: 0.42em; /* Increased word spacing based on recommendations made by the British Dyslexia Association. */
 
     /* Theme Colors */
-    --placeholder: #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
     --primary:     #1F5979;
     --secondary:   #FDE73C;
-    --tertiary:    #642F66; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
-    --brand:       #4A412A; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
-    --accent:      #0C3048; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
-    --special:     #71440D; /* The green color used on cigarette packets in Australia (Pantone 448 C) */
-    --success:     #198754;
-    --info:        #0dcaf0;
-    --warning:     #ffc107;
-    --danger:      #dc3545;
-    --light:       #f8f9fa;
-    --dark:        #212529;
-
-    /* Grayscale */
-    --white:     #ffffff;
-    --gray-1:    #f8f9fa;
-    --gray-2:    #e9ecef;
-    --gray-3:    #dee2e6;
-    --gray-4:    #ced4da;
-    --gray-5:    #adb5bd;
-    --gray-6:    #6c757d;
-    --gray-7:    #495057;
-    --gray-8:    #343a40;
-    --gray-9:    #212529;
-    --black:     #000000;
-
-    /* Borders */
-    --border-exthin:  0.16rem;
-    --border-thin:    0.24rem;
-    --border-std:     0.32rem;
-    --border-thick:   0.40rem;
-    --border-exthick: 0.48rem;
+    --tertiary:    #642F66;
+    --accent:      #0C3048;
+    --special:     #71440D;
 
     /* Body */
     --body-bg:      #f5f5f5;
@@ -142,23 +114,9 @@ a {
     text-decoration: underline;
 }
 
-/* a:hover, a:focus {
-    background-color: var(--placeholder);
-    outline: 2px solid var(--placeholder);
-} */
-
 button {
-    /* background-color: var(--placeholder); */
-    /* color: var(--placeholder); */
-    /* border: none; */
     cursor: pointer;
-    /* transition: background 0.3s; */
 }
-
-/* button:hover, button:focus {
-    background-color: var(--placeholder);
-    outline: 2px solid var(--placeholder);
-} */
 
 /* Forms */
 input, textarea, select, button {
@@ -191,10 +149,7 @@ h2 {
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing);
     word-spacing: var(--word-spacing);
-    /* margin-block-start: 0.83em; */
-    /* margin-block-end: 0.83em; */
     margin-top: 1rem;
-    /* margin-bottom: 1rem; */
 }
 
 h3 {
@@ -251,13 +206,6 @@ li {
     margin-bottom: 1rem;
 }
 
-/* Media */
-img, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 p {
     display: block;
     font-size: var(--fs00);
@@ -310,6 +258,31 @@ p {
 }
 
 .btnL:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.3rem solid var(--secondary);
+    border-radius: 1rem;
+}
+
+.btnO {
+    background-color: var(--primary);
+    color: var(--secondary);
+    width: 20rem;
+    height: 5rem;
+    margin: 1rem;
+    border: 0.3rem solid var(--primary);
+    border-radius: 1rem;
+    padding: 0;
+
+    
+    font-size: var(--fs24);
+    font-weight: bold;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
+}
+
+.btnO:hover {
     background-color: var(--tertiary);
     color: var(--secondary);
     border: 0.3rem solid var(--secondary);
@@ -479,9 +452,6 @@ p {
 
 #movie-change {
     margin-top: 7.5rem;
-    /* color: var(--primary);
-    border: 1rem solid var(--primary);
-    border-radius: 4rem; */
 }
 
 .tabs {
@@ -490,7 +460,32 @@ p {
     justify-content: center;
 }
 
-#add-btn {
+.tabButton {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+}
+
+/* #defaultOpen {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--primary);
+    border-radius: 4rem 0 0 0;
+    width: calc(100% / 3);
+}
+
+#defaultOpen:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border: 0.5rem solid var(--secondary);
+} */
+
+.tabForm {
+    /* display: true; */
+    display: none;
+}
+
+.add-btn {
     background-color: var(--accent);
     color: var(--secondary);
     border: 0.5rem solid var(--accent);
@@ -498,13 +493,13 @@ p {
     width: calc(100% / 3);
 }
 
-#add-btn:hover {
+/* .add-btn:hover {
     background-color: var(--tertiary);
     color: var(--secondary);
     border: 0.5rem solid var(--secondary);
-}
+} */
 
-#up-btn {
+.up-btn {
     background-color: var(--accent);
     color: var(--secondary);
     border: 0.5rem solid var(--accent);
@@ -512,13 +507,13 @@ p {
     width: calc(100% / 3);
 }
 
-#up-btn:hover {
+/* .up-btn:hover {
     background-color: var(--tertiary);
     color: var(--secondary);
     border: 0.5rem solid var(--secondary);
-}
+} */
 
-#del-btn {
+.del-btn {
     background-color: var(--accent);
     color: var(--secondary);
     border: 0.5rem solid var(--accent);
@@ -526,14 +521,13 @@ p {
     width: calc(100% / 3);
 }
 
-#del-btn:hover {
+/* .del-btn:hover {
     background-color: var(--tertiary);
     color: var(--secondary);
     border: 0.5rem solid var(--secondary);
-}
+} */
 
-#add-mov {
-    /* height: 500px; */
+#addMov {
     background-color: var(--primary);
     border: 0.5rem solid var(--primary);
     border-radius: 0 0 4rem 4rem;
@@ -544,26 +538,6 @@ p {
     color: var(--secondary);
     border: 0.5rem solid var(--secondary);
 }
-
-/* .tab-form {
-    display: none;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 2.5rem;
-} */
-
-
-
-
-
-
-
-/* #add-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 2.5rem;
-} */
 
 .change-div {
     display: flex;
@@ -581,31 +555,21 @@ p {
     width: 79.8%;
 }
 
-#up-mov {
+#upMov {
     background-color: var(--primary);
     border: 0.5rem solid var(--primary);
     border-radius: 0 0 4rem 4rem;
 }
 
-/* #up-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 2.5rem;
-} */
-
-#del-mov {
+#delMov {
     background-color: var(--primary);
     border: 0.5rem solid var(--primary);
     border-radius: 0 0 4rem 4rem;
 }
 
-/* #del-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 2.5rem;
-} */
+.bbm {
+    margin-bottom: 26rem;
+}
 
 .sub-change {
     display: flex;
@@ -617,6 +581,18 @@ p {
 .movie-change-btn {
     width: 25%;
     padding: 0;
+}
+
+.activeTab {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+}
+
+.activeTab:hover {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 #footer {
