@@ -221,13 +221,6 @@ p {
 /* End of CSS resets */
 
 
-
-/* Utilities */
-
-/* End of Utilities */
-
-
-
 /* Components */
 
 .container {
@@ -466,20 +459,6 @@ p {
     border: 0.5rem solid var(--secondary);
 }
 
-/* #defaultOpen {
-    background-color: var(--primary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--primary);
-    border-radius: 4rem 0 0 0;
-    width: calc(100% / 3);
-}
-
-#defaultOpen:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-} */
-
 .tabForm {
     /* display: true; */
     display: none;
@@ -493,12 +472,6 @@ p {
     width: calc(100% / 3);
 }
 
-/* .add-btn:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-} */
-
 .up-btn {
     background-color: var(--accent);
     color: var(--secondary);
@@ -507,12 +480,6 @@ p {
     width: calc(100% / 3);
 }
 
-/* .up-btn:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-} */
-
 .del-btn {
     background-color: var(--accent);
     color: var(--secondary);
@@ -520,12 +487,6 @@ p {
     border-radius: 0 4rem 0 0;
     width: calc(100% / 3);
 }
-
-/* .del-btn:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-} */
 
 #addMov {
     background-color: var(--primary);

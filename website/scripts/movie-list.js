@@ -1,12 +1,9 @@
 // The MovieList Class
-
-
 class MovieList {
     constructor(htmlID, movies) {
         this.htmlID = htmlID // the html id of where the list is to be shown
         this.movieList = movies; // the array of movies to be displayed
         this.refresh(this.movieList);
-        console.log(`This is the last line of the constructor.`);
     } // End of the constructor
 
     // Methods
@@ -17,28 +14,18 @@ class MovieList {
         this.mArray = mArray
         // clear any existing table rows
         this.removeElements();
-        console.log(`This is the 1st line of genMovieTable`);
         // find the body of the movie-table in the HTML
         let mTable = document.querySelector(this.htmlID);
-        console.log('Found:', mTable);
-
-        console.log(`This is the 2nd line of genMovieTable`);
         // loop the array to get the data for each movie
         mArray.forEach(CreateMovieTable);
-        // for (let i = 0; i < this.mArray.length; i++) {
-        //     CreateMovieTable();
-        // }
         
-        console.log(`This is the 3rd line of genMovieTable`);
         function CreateMovieTable(movie) {
 
-            console.log(`This is the 4th line of genMovieTable`);
             // create a blank row
             const newRow = document.createElement('tr');
             // give the blank row the class of "row"
             newRow.classList.add('row')
 
-            console.log(`This is the 5th line of genMovieTable`);
             // add the data into the blank row
             newRow.innerHTML = `
                 <td>${movie.movieID}</td>
@@ -47,11 +34,8 @@ class MovieList {
                 <td>${movie.movieRating}</td>
             `;
 
-            console.log(`This is the 6th line of genMovieTable`);
             // add the populated row into the mTable variable
             mTable.appendChild(newRow);
-
-            console.log(`This is the 7th line of genMovieTable`);
         }
     }
 
@@ -79,7 +63,6 @@ class MovieList {
 
     // Refresh function
     refresh(mArray) {
-        console.log(`You called the refresh function.`);
         this.mArray = mArray
         // remove the current list
         this.removeElements();
@@ -90,10 +73,8 @@ class MovieList {
 
     // Add function
     add(id, title, year, rating) {
-        console.log(`You called the add function.`);
         // add a new movie to the end
         this.movieList.push({movieID: id, movieTitle: title, year, movieYear: year, movieRating: rating});
-        console.log(`A new movie should have been added.`);
         this.refresh(this.movieList); // not sure if I will need this
     }
 
@@ -141,7 +122,6 @@ class MovieList {
 
     // Sort A - Z
     sortAZ() {
-        console.log(`You called the sortAZ function.`);
         this.movieList.sort(function(a, b) {
             return a.movieTitle.localeCompare(b.movieTitle);
         });
@@ -151,7 +131,6 @@ class MovieList {
 
     // Sort Z - A
     sortZA() {
-        console.log(`You called the sortZA function.`);
         this.movieList.sort(function(a, b) {
             return b.movieTitle.localeCompare(a.movieTitle);
         });
@@ -161,7 +140,6 @@ class MovieList {
 
     // Sort Rating
     sortRating() {
-        console.log(`You called the sortRating function.`);
         this.movieList.sort(function(a, b) {
             return Number(b.movieRating) - Number(a.movieRating);
         });
@@ -171,7 +149,6 @@ class MovieList {
 
     // Sort by ID
     sortID() {
-        console.log(`You called the sortID function.`);
         this.movieList.sort(function(a, b) {
             return Number(a.movieID) - Number(b.movieID);
         });
@@ -190,7 +167,6 @@ class MovieList {
                 // if the titleString is in movieTitle add it to the shortlist
                 shortList.push(movie);
             }
-            console.log(`The search for loop is running.`);
         }
         // Create the list to display
         this.genMovieTable(shortList);
