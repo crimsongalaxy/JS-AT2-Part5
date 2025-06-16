@@ -78,6 +78,12 @@ function ratingClick () {
     movieList.sortRating();
 }
 
+// Add a refresh click to the movie list heading button
+function refreshClick() {
+    console.log(`You clicked the refresh button.`);
+    movieList.sortID();
+}
+
 // Add a new movie to the list
 function addClick() {
     // Get the form elements from the DOM
