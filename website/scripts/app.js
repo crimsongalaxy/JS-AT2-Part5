@@ -40,10 +40,43 @@ let initMovies = [
 // MovieList takes in the rootId and the movie array
 let movieList = new MovieList('#mTableBody', initMovies);
 
+// Sort the list by movieID as the "default" sort order
+movieList.sortID();
+
 // Event functions
 // Search click
+function searchClick() {
+    console.log(`You clicked the search button.`);
+    // Get the form elements from the DOM
+    let formElements = document.getElementById("search-form").elements;
+    // Get the id
+    let searchString = formElements["search"].value.toLowerCase();
+
+    console.log(`${searchString}`);
+
+    movieList.search(searchString);
+
+    // clear the input field
+    formElements.search.value = "";
+}
+
 // A - Z click
+function azClick () {
+    console.log(`You clicked the A - Z sort button.`);
+    movieList.sortAZ();
+}
+
 // Z - A click
+function zaClick () {
+    console.log(`You clicked the Z - A sort button.`);
+    movieList.sortZA();
+}
+
+// Rating click
+function ratingClick () {
+    console.log(`You clicked the Ratings sort button.`);
+    movieList.sortRating();
+}
 
 // Add a new movie to the list
 function addClick() {
@@ -151,28 +184,4 @@ function openForm(evt, action) {
 
 // Open tab by default
 document.getElementById('defaultOpen').click();
-
-
-// Footer
-// Inject the date into the footer
-// I'm not doing this.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

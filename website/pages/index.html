@@ -22,10 +22,10 @@
                 <div>
                     <h2>Movie search</h2>
                 </div>
-                <form action="#" id="search-form">
+                <form id="search-form">
                     <label for="search-string"></label>
-                    <input id="search-field" type="text" placeholder="Search...">
-                    <button type="button" name="search" onclick="" id="search-btn" class="btnD">Search</button>
+                    <input id="search-field" type="text" name="search" placeholder="Search...">
+                    <button type="button" onclick="searchClick()" id="search-btn" class="btnD">Search</button>
                 </form>
                 <div>
                 </div>
@@ -35,9 +35,9 @@
                     <h2>List sort</h2>
                 </div>
                 <div id="sort-btns">
-                    <button type="button" name="sortAZ" onclick="" class="btnL">A-Z</button>
-                    <button type="button" name="sortZA" onclick="" class="btnL">Z-A</button>
-                    <button type="button" name="sortRat" onclick="" class="btnL">Rating</button>
+                    <button type="button" name="sortAZ" onclick="azClick()" class="btnL">A-Z</button>
+                    <button type="button" name="sortZA" onclick="zaClick()" class="btnL">Z-A</button>
+                    <button type="button" name="sortRat" onclick="ratingClick()" class="btnL">Rating</button>
                 </div>
             </section>
         </section>

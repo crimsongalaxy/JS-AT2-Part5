@@ -5,40 +5,18 @@ class MovieList {
     constructor(htmlID, movies) {
         this.htmlID = htmlID // the html id of where the list is to be shown
         this.movieList = movies; // the array of movies to be displayed
-        this.refresh();
+        this.refresh(this.movieList);
         console.log(`This is the last line of the constructor.`);
     } // End of the constructor
 
     // Methods
-    // Generate one row of the list
-    // movieRow(title, year) {
-    //     // get the parent element
-    //     const rootElement = document.getElementById(this.rootId);
-    //     // create our new list item
-    //     const row = document.createElement('li');
-    //     // create the text and add the class to the new list item
-    //     row.classList.add('row');
-    //     row.textContent = `${title} (${year})`;
-    //     // add the new element to the DOM
-    //     rootElement.appendChild(row);
-    // }
-
-    // // Generate all rows
-    // genMovieList() {
-    //     // Loop through the array
-    //     for(let i = 0; i < this.movieList.length; i++) {
-    //         let movie = this.movieList[i];
-    //         // Call the movieRow function to generate the row.
-    //         this.movieRow(movie.title, movie.year);
-    //     }
-    // }
-
-
-
-
 
     // Generate the table
-    genMovieTable() {
+    genMovieTable(mArray) {
+        // define the variable
+        this.mArray = mArray
+        // clear any existing table rows
+        this.removeElements();
         console.log(`This is the 1st line of genMovieTable`);
         // find the body of the movie-table in the HTML
         let mTable = document.querySelector(this.htmlID);
@@ -46,7 +24,10 @@ class MovieList {
 
         console.log(`This is the 2nd line of genMovieTable`);
         // loop the array to get the data for each movie
-        initMovies.forEach(CreateMovieTable);
+        mArray.forEach(CreateMovieTable);
+        // for (let i = 0; i < this.mArray.length; i++) {
+        //     CreateMovieTable();
+        // }
         
         console.log(`This is the 3rd line of genMovieTable`);
         function CreateMovieTable(movie) {
@@ -75,10 +56,8 @@ class MovieList {
     }
 
 
-
-
-
     // Generate the movieList based on search term
+
 
     // Remove all list element from the DOM
     removeElements() {
@@ -99,12 +78,13 @@ class MovieList {
 
 
     // Refresh function
-    refresh() {
+    refresh(mArray) {
         console.log(`You called the refresh function.`);
+        this.mArray = mArray
         // remove the current list
         this.removeElements();
         // add the new list
-        this.genMovieTable();
+        this.genMovieTable(this.mArray);
     }
 
 
@@ -114,9 +94,8 @@ class MovieList {
         // add a new movie to the end
         this.movieList.push({movieID: id, movieTitle: title, year, movieYear: year, movieRating: rating});
         console.log(`A new movie should have been added.`);
-        this.refresh(); // not sure if I will need this
+        this.refresh(this.movieList); // not sure if I will need this
     }
-
 
 
     // Create a sequential search function to find a movies index from its ID.
@@ -147,22 +126,74 @@ class MovieList {
         // update the rating
         this.movieList[index].movieRating = rating;
         // refresh the list
-        this.refresh();
+        this.refresh(this.movieList);
     }
+
 
     // Delete function
     delete(ID) {
         // Remove a movie from the array
         this.movieList.splice(this.findIndex(this.movieList, ID), 1);
         // Refresh
-        this.refresh();
+        this.refresh(this.movieList);
     }
 
+
     // Sort A - Z
+    sortAZ() {
+        console.log(`You called the sortAZ function.`);
+        this.movieList.sort(function(a, b) {
+            return a.movieTitle.localeCompare(b.movieTitle);
+        });
+        this.refresh(this.movieList);
+    }
+
+
     // Sort Z - A
+    sortZA() {
+        console.log(`You called the sortZA function.`);
+        this.movieList.sort(function(a, b) {
+            return b.movieTitle.localeCompare(a.movieTitle);
+        });
+        this.refresh(this.movieList);
+    }
+
+
     // Sort Rating
+    sortRating() {
+        console.log(`You called the sortRating function.`);
+        this.movieList.sort(function(a, b) {
+            return Number(b.movieRating) - Number(a.movieRating);
+        });
+        this.refresh(this.movieList);
+    }
+
+
+    // Sort by ID
+    sortID() {
+        console.log(`You called the sortID function.`);
+        this.movieList.sort(function(a, b) {
+            return Number(a.movieID) - Number(b.movieID);
+        });
+        this.refresh(this.movieList);
+    }
+
 
     // Search by partial title
+    search(titleString) {
+        // create an array to hold the search results
+        let shortList = [];
+        // loop the array to compare the titleString with movieTitle
+        for (let movie of this.movieList) {
+            // Compare titleString and movieTitle
+            if(movie.movieTitle.toLowerCase().includes(titleString)) {
+                // if the titleString is in movieTitle add it to the shortlist
+                shortList.push(movie);
+            }
+            console.log(`The search for loop is running.`);
+        }
+        // Create the list to display
+        this.genMovieTable(shortList);
+    }
 
 }
-
