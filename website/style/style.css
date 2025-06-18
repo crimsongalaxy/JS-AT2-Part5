@@ -378,7 +378,6 @@ p {
     text-decoration: none;
 }
 
-
 #movie-list {
     display: flex;
     flex-direction: column;
@@ -390,6 +389,10 @@ p {
     margin-top: 5rem;
     padding-bottom: 5rem;
     height: auto;
+}
+
+#movie-list-heading {
+    margin: 2rem;
 }
 
 #movie-table {
