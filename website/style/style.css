@@ -258,21 +258,11 @@ p {
 }
 
 .btnO {
-    background-color: var(--primary);
-    color: var(--secondary);
-    width: 20rem;
-    height: 5rem;
-    margin: 1rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    height: 3.25rem;
     border: 0.3rem solid var(--primary);
     border-radius: 1rem;
-    padding: 0;
-
-    
-    font-size: var(--fs24);
-    font-weight: bold;
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing);
-    word-spacing: var(--word-spacing);
 }
 
 .btnO:hover {
@@ -377,6 +367,18 @@ p {
     text-decoration: none;
 }
 
+#refresh-button {
+    margin-top: 5rem;
+}
+
+#refresh-button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
 #movie-list {
     display: flex;
     flex-direction: column;
@@ -385,7 +387,7 @@ p {
     color: var(--secondary);
     border: 1rem solid var(--secondary);
     border-radius: 4rem;
-    margin-top: 7.5rem;
+    margin-top: 5rem;
     padding-bottom: 5rem;
     height: auto;
 }
