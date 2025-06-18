@@ -13,29 +13,6 @@ let initMovies = [
 ]
 
 
-
-
-
-
-
-
-
-
-
-
-
-// const sortFilmsIDAsc = initMovies.sort(function(a, b) {
-//     return a.movieID - b.movieID;
-// });
-
-
-
-
-
-
-
-
-
 // Create an instance of the MovieList class
 // MovieList takes in the rootId and the movie array
 let movieList = new MovieList('#mTableBody', initMovies);
@@ -46,14 +23,12 @@ movieList.sortID();
 // Event functions
 // Search click
 function searchClick() {
-    console.log(`You clicked the search button.`);
     // Get the form elements from the DOM
     let formElements = document.getElementById("search-form").elements;
     // Get the id
     let searchString = formElements["search"].value.toLowerCase();
 
-    console.log(`${searchString}`);
-
+    // pass the searchString to the search function
     movieList.search(searchString);
 
     // clear the input field
@@ -62,32 +37,27 @@ function searchClick() {
 
 // A - Z click
 function azClick () {
-    console.log(`You clicked the A - Z sort button.`);
     movieList.sortAZ();
 }
 
 // Z - A click
 function zaClick () {
-    console.log(`You clicked the Z - A sort button.`);
     movieList.sortZA();
 }
 
 // Rating click
 function ratingClick () {
-    console.log(`You clicked the Ratings sort button.`);
     movieList.sortRating();
 }
 
 // Add a refresh click to the movie list heading button
 function refreshClick() {
-    console.log(`You clicked the refresh button.`);
     movieList.sortID();
 }
 
 // Add a new movie to the list
 function addClick() {
     // Get the form elements from the DOM
-    console.log(`You called the addClick function.`);
     let formElements = document.getElementById("add-form").elements;
     // Get the id
     let id = formElements["ID"].value;
@@ -106,14 +76,11 @@ function addClick() {
     formElements.title.value = "";
     formElements.year.value = "";
     formElements.rating.value = "";
-
-    console.log(`This is the end of the addClick function.`);
 }
 
 // Update a movie in the list
 function upClick() {
     // Get the form elements from the DOM
-    console.log(`You called the upClick function.`);
     let formElements = document.getElementById("up-form").elements;
     // Get the id
     let id = formElements["ID"].value;
@@ -132,14 +99,11 @@ function upClick() {
     formElements.title.value = "";
     formElements.year.value = "";
     formElements.rating.value = "";
-
-    console.log(`This is the end of the upClick function.`);
 }
 
 // Delete a movie from the list
 function delClick() {
     // Get the form elements from the DOM
-    console.log(`You called the delClick function.`);
     let formElements = document.getElementById("del-form").elements;
     // Get the id
     let id = formElements["ID"].value;
@@ -149,8 +113,6 @@ function delClick() {
 
     // clear the input fields
     formElements.ID.value = "";
-
-    console.log(`This is the end of the upClick function.`);
 }
 
 
@@ -158,13 +120,8 @@ function delClick() {
 
 // UI Javascript
 // Tabs section
-// Function openForm
-// Take in 2 parameters, an event and an action
-// Return nothing
 function openForm(evt, action) {
     // declare variables
-    // tabContent = tabForm
-    // tabLinks = tabButton
     let i, tabForm, tabButton;
 
     // Get all elements that have the classname of tabForm
@@ -182,7 +139,6 @@ function openForm(evt, action) {
     }
 
     // Show the current tab and add the active class to the button that opened the tabForm
-    // If this doesn't work go back to 2:15:00 in the video
     document.getElementById(action).style.display = "block";
     evt.currentTarget.className += " activeTab";
 }
@@ -190,4 +146,3 @@ function openForm(evt, action) {
 
 // Open tab by default
 document.getElementById('defaultOpen').click();
-

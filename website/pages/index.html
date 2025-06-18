@@ -42,12 +42,18 @@
             </section>
         </section>
         <!-- end of the utilities section -->
+        
+        <!-- start of the refresh button -->
+        <div id="refresh-button">
+            <button type="button" name="refresh" onclick="refreshClick()" class="btnO">
+                Refresh List
+            </button>
+        </div>
+        <!-- end of the refresh button -->
 
         <!-- start of the movie list section -->
         <section id="movie-list" class="container">
-            <button type="button" name="refresh" onclick="refreshClick()" class="btnO">
-                Movie List
-            </button>
+            <h2 id="movie-list-heading">Movie List</h2>
             <table id="movie-table">
                 <thead>
                     <tr>

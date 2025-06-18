@@ -221,13 +221,6 @@ p {
 /* End of CSS resets */
 
 
-
-/* Utilities */
-
-/* End of Utilities */
-
-
-
 /* Components */
 
 .container {
@@ -265,21 +258,11 @@ p {
 }
 
 .btnO {
-    background-color: var(--primary);
-    color: var(--secondary);
-    width: 20rem;
-    height: 5rem;
-    margin: 1rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    height: 3.25rem;
     border: 0.3rem solid var(--primary);
     border-radius: 1rem;
-    padding: 0;
-
-    
-    font-size: var(--fs24);
-    font-weight: bold;
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing);
-    word-spacing: var(--word-spacing);
 }
 
 .btnO:hover {
@@ -384,6 +367,17 @@ p {
     text-decoration: none;
 }
 
+#refresh-button {
+    margin-top: 5rem;
+}
+
+#refresh-button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
 #movie-list {
     display: flex;
     flex-direction: column;
@@ -392,9 +386,13 @@ p {
     color: var(--secondary);
     border: 1rem solid var(--secondary);
     border-radius: 4rem;
-    margin-top: 7.5rem;
+    margin-top: 5rem;
     padding-bottom: 5rem;
     height: auto;
+}
+
+#movie-list-heading {
+    margin: 2rem;
 }
 
 #movie-table {
@@ -466,20 +464,6 @@ p {
     border: 0.5rem solid var(--secondary);
 }
 
-/* #defaultOpen {
-    background-color: var(--primary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--primary);
-    border-radius: 4rem 0 0 0;
-    width: calc(100% / 3);
-}
-
-#defaultOpen:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-} */
-
 .tabForm {
     /* display: true; */
     display: none;
@@ -493,12 +477,6 @@ p {
     width: calc(100% / 3);
 }
 
-/* .add-btn:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-} */
-
 .up-btn {
     background-color: var(--accent);
     color: var(--secondary);
@@ -507,12 +485,6 @@ p {
     width: calc(100% / 3);
 }
 
-/* .up-btn:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-} */
-
 .del-btn {
     background-color: var(--accent);
     color: var(--secondary);
@@ -520,12 +492,6 @@ p {
     border-radius: 0 4rem 0 0;
     width: calc(100% / 3);
 }
-
-/* .del-btn:hover {
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    border: 0.5rem solid var(--secondary);
-} */
 
 #addMov {
     background-color: var(--primary);
