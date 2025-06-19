@@ -74,8 +74,12 @@ class MovieList {
     // Add function
     add(id, title, year, rating) {
         // add a new movie to the end
-        this.movieList.push({movieID: id, movieTitle: title, year, movieYear: year, movieRating: rating});
-        this.refresh(this.movieList); // not sure if I will need this
+        if (id == "" || title == "" || year == "" || rating == "") {
+            return;
+        } else {
+            this.movieList.push({movieID: id, movieTitle: title, year, movieYear: year, movieRating: rating});
+            this.refresh(this.movieList);
+        }
     }
 
 
@@ -91,7 +95,8 @@ class MovieList {
                 found = i;
                 break;
             }
-        }
+        } // End of the for loop.
+
         return found;
     }
 
@@ -100,6 +105,9 @@ class MovieList {
     update(ID, title, year, rating) {
         // find the index that matches the ID
         const index = this.findIndex(this.movieList, ID);
+        if (id == "" || title == "" || year == "" || rating == "") {
+            return;
+        } else {
         // update the title
         this.movieList[index].movieTitle = title;
         // update the year
@@ -108,15 +116,22 @@ class MovieList {
         this.movieList[index].movieRating = rating;
         // refresh the list
         this.refresh(this.movieList);
+        }
     }
 
 
     // Delete function
     delete(ID) {
-        // Remove a movie from the array
-        this.movieList.splice(this.findIndex(this.movieList, ID), 1);
-        // Refresh
-        this.refresh(this.movieList);
+        // Check if the index is in the array
+        const idIndex = this.findIndex(this.movieList, ID)
+
+        // If it was found:
+        if (idIndex != -1) {
+            // Remove a movie from the array
+            this.movieList.splice(this.findIndex(this.movieList, idIndex), 1);
+            // Refresh
+            this.refresh(this.movieList);
+        }
     }
 
 
